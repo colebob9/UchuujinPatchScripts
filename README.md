@@ -1,7 +1,7 @@
 # UchuujinPatchScripts
 Scripts to patch the PSP game Nichijou: Uchuujin for the [English Translation Project](https://github.com/noneucat/uchuujin)
 
-Disclaimer: Not completely user-friendly yet. Check on what these scripts are doing when using them. Also, currently missing features like texture patching.
+Disclaimer: Not completely finished yet. Check on what these scripts are doing when using them. Also, currently missing features like texture patching.
 
 ## Prerequisites
 * Have 7-Zip and Python 3 installed. (Python must be in PATH)
