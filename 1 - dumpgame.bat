@@ -1,8 +1,6 @@
 @ECHO OFF
 
 "C:\Program Files\7-Zip\7z.exe" x -odump "2668 - Nichijou - Uchuujin (Japan) (v1.01).iso"
-mkdir temp
-
 
 mkdir cpkdumps\sc
 copy dump\PSP_GAME\USRDIR\DATA\sc.cpk cpkdumps\sc\
