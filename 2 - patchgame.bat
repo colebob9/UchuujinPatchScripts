@@ -6,6 +6,6 @@ copy uchuujin-master\EBOOT.BIN.patch temp_patch\
 cd executables\bspatch
 bspatch.exe ..\..\temp_patch\EBOOT.BIN ..\..\temp_patch\PATCHED.BIN ..\..\temp_patch\EBOOT.BIN.patch
 
+copy temp_patch\PATCHED.BIN dump\PSP_GAME\SYSDIR\EBOOT.BIN /Y
 
-:: TODO: Copy back EBOOT to game dump
 PAUSE
