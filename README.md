@@ -24,6 +24,6 @@ Currently *does not* include features like: (will be implemented)
 ## How to use
 
 1. Clone this repository.
-2. Put game .ISO in the same directory as the .bat scripts. (Named `2668 - Nichijou - Uchuujin (Japan) (v1.01).iso` in script. Change if needed.)
+2. Put game .ISO in the same directory as the .bat scripts. (Named `2668 - Nichijou - Uchuujin (Japan) (v1.01).iso` in config file. Change if needed.)
 3. Clone Translation repository to a folder named `uchuujin-master` in the same directory as the .bat scripts. (Use `scripts` folder from the [weblate branch](https://github.com/noneucat/uchuujin/tree/weblate) to get the latest translations)
 5. Execute each script in order.
