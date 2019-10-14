@@ -5,10 +5,13 @@
 :: dump\PSP_GAME\USRDIR\DATA\sc.cpk
 :: dump\PSP_GAME\SYSDIR\EBOOT.BIN
 :: 
-:: 
+:: more to add...
 :: 
 
-copy "2668 - Nichijou - Uchuujin (Japan) (v1.01).iso" NichiPatched.iso
+:: get values from config
+call Config.bat
+
+copy "%isoName%" NichiPatched.iso
 
 :: Test image, comment out when not testing.
 executables\UMD-replace\UMD-replace.exe NichiPatched.iso PSP_GAME\ICON0.PNG dump\PSP_GAME\ICON0.PNG

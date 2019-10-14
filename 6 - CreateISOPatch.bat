@@ -1,8 +1,11 @@
+:: get values from config
+call Config.bat
+
 mkdir patch_distrib
 
 cd patch_distrib
 
-..\executables\xdelta3.exe -e -9 -S djw -vfs "..\2668 - Nichijou - Uchuujin (Japan) (v1.01).iso" "..\NichiPatched.iso" "NichiEngPatch.vcdiff"
+..\executables\xdelta3.exe -e -9 -S djw -vfs "..\%isoName%" "..\NichiPatched.iso" "NichiEngPatch.vcdiff"
 
 :: copy files for distribution
 
@@ -15,7 +18,7 @@ cd ..
 
 set zipName=NichiEngPatch_%date:~10,4%-%date:~4,2%-%date:~7,2%
 
-"C:\Program Files\7-Zip\7z.exe" a %zipName%.zip .\patch_distrib\*
+"%sevenZipLocation%" a %zipName%.zip .\patch_distrib\*
 
 
 

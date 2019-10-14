@@ -8,6 +8,9 @@ echo.
 echo The script will delete the following folders (only in this directory):
 echo temp_pack, temp_patch, cpkdumps, dump, patch_distrib
 echo.
+echo Will also delete files:
+echo NichiPatched.iso
+echo.
 PAUSE
 
 :: Delete generated folders
@@ -16,5 +19,6 @@ RD /S /Q temp_patch
 RD /S /Q cpkdumps
 RD /S /Q dump
 RD /S /Q patch_distrib
+DEL NichiPatched.iso
 
 PAUSE

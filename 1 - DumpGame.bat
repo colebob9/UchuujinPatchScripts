@@ -1,6 +1,9 @@
 @ECHO OFF
 
-"C:\Program Files\7-Zip\7z.exe" x -odump "2668 - Nichijou - Uchuujin (Japan) (v1.01).iso"
+:: get values from config
+call Config.bat
+
+"%sevenZipLocation%" x -odump "%isoName%"
 
 mkdir cpkdumps\sc
 copy dump\PSP_GAME\USRDIR\DATA\sc.cpk cpkdumps\sc\
