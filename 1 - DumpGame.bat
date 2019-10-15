@@ -3,8 +3,11 @@
 :: get values from config
 call Config.bat
 
+:: Create folder for game dump and extract .iso contents to it.
 "%sevenZipLocation%" x -odump "%isoName%"
 
+
+:: Make folder for sc.cpk dump and dump contents with CriPakTools.
 mkdir cpkdumps\sc
 copy dump\PSP_GAME\USRDIR\DATA\sc.cpk cpkdumps\sc\
 cd cpkdumps\sc
