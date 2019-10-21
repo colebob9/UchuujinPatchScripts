@@ -3,6 +3,8 @@
 :: get values from config
 call Config.bat
 
+ECHO Script 1 - DumpGame
+
 :: Create folder for game dump and extract .iso contents to it.
 "%sevenZipLocation%" x -odump "%isoName%"
 
@@ -18,12 +20,12 @@ cd ..\..\
 
 REM Commented out other .cpk files until these are able to be modified.
 
-REM mkdir cpkdumps\union
-REM copy dump\PSP_GAME\USRDIR\DATA\union.cpk cpkdumps\union\
-REM cd cpkdumps\union
-REM ..\..\executables\CriPakTools.exe union.cpk ALL
-REM del union.cpk
-REM cd ..\..\
+mkdir cpkdumps\union
+copy dump\PSP_GAME\USRDIR\DATA\union.cpk cpkdumps\union\
+cd cpkdumps\union
+..\..\executables\CriPakTools.exe union.cpk ALL
+del union.cpk
+cd ..\..\
 
 REM mkdir cpkdumps\vo
 REM copy dump\PSP_GAME\USRDIR\DATA\vo.cpk cpkdumps\vo\
@@ -32,4 +34,10 @@ REM ..\..\executables\CriPakTools.exe vo.cpk ALL
 REM del vo.cpk
 REM cd ..\..\
 
+:: Ending of script
+:: Whether to skip end pause statement
+IF "%1"=="pauseskip" (
+echo No pause!
+) ELSE (
 PAUSE
+)

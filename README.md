@@ -11,10 +11,9 @@ These scripts are designed to make the process of dumping, modifying, and patchi
 * EBOOT patching
 * Replacement of patched files back into the original .ISO
 * Creation of binary diff with xdelta
+* Menu for executing these tasks easily
 
 Currently *does not* include features like: (will be implemented)
-* Executing each batch script in order
-* Options for only dumping the game or creating a patch
 * Texture dumping and repacking
 * Text script dumping
 * Automatically downloading the repositories needed

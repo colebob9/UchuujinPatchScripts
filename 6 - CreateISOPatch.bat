@@ -1,6 +1,7 @@
 :: get values from config
 call Config.bat
 
+ECHO Script 6 - CreateISOPatch
 
 :: Make folder for patch distribution.
 mkdir patch_distrib
@@ -16,7 +17,17 @@ copy ..\executables\PatchISO.bat
 :: automatically create zip archive for patch distribution
 cd ..
 :: create name with date in YYYY-MM-DD format
-set zipName=NichiEngPatch_%date:~10,4%-%date:~4,2%-%date:~7,2%
-"%sevenZipLocation%" a %zipName%.zip .\patch_distrib\*
+set zipName=NichiEngPatch_%date:~10,4%-%date:~4,2%-%date:~7,2%.zip
+"%sevenZipLocation%" a %zipName% .\patch_distrib\*
 
+ECHO Created a file named:
+ECHO %zipName%
+ECHO.
+
+:: Ending of script
+:: Whether to skip end pause statement
+IF "%1"=="pauseskip" (
+echo No pause!
+) ELSE (
 PAUSE
+)

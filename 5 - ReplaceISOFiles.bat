@@ -1,3 +1,8 @@
+:: get values from config
+call Config.bat
+
+ECHO Script 5 - ReplaceISOFiles
+
 :: Example command:
 :: executables\UMD-replace\UMD-replace.exe NichiTest.iso PSP_GAME\ICON0.PNG dump\PSP_GAME\ICON0.PNG
 
@@ -28,4 +33,17 @@ executables\UMD-replace\UMD-replace.exe NichiPatched.iso PSP_GAME\SYSDIR\EBOOT.B
 :: Remember union.cpk and vo.cpk for later here
 
 
+REM :: PPSSPP testing
+REM IF EXIST ppsspp_win\PPSSPPWindows64.exe (
+REM ppsspp_win\PPSSPPWindows64.exe NichiPatched.iso
+REM ) ELSE (
+REM echo PPSSPP not found in current directory. Skipping.
+REM )
+
+:: Ending of script
+:: Whether to skip end pause statement
+IF "%1"=="pauseskip" (
+echo No pause!
+) ELSE (
 PAUSE
+)
