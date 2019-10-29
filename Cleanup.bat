@@ -12,8 +12,14 @@ echo.
 echo The script will delete the following folders (only in this directory):
 echo temp_pack, temp_patch, cpkdumps, dump, patch_distrib, texture_dump
 echo.
+
+IF "%2"=="keepISO" (
+echo Keeping ISO.
+) ELSE (
 echo Will also delete files:
 echo NichiPatched.iso
+)
+
 echo.
 
 :: Whether to skip end pause statement
@@ -30,7 +36,13 @@ RD /S /Q cpkdumps
 RD /S /Q dump
 RD /S /Q patch_distrib
 RD /S /Q texture_dump
+
+:: Whether to keep iso file
+IF "%2"=="keepISO" (
+echo Keeping ISO.
+) ELSE (
 DEL NichiPatched.iso
+)
 
 :: Ending of script
 :: Whether to skip end pause statement
