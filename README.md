@@ -13,9 +13,10 @@ These scripts are designed to make the process of dumping, modifying, and patchi
 * Creation of binary diff with xdelta
 * Menu for executing these tasks easily
 * PPSSPP testing
+* Automatically downloading the repositories needed
 
 Currently *does not* include features like: (will be implemented)
-* Automatically downloading the repositories needed
+
 * Texture dumping and repacking
 * Text script dumping
 
@@ -37,6 +38,6 @@ Currently *does not* include features like: (will be implemented)
 
 1. Clone this repository.
 2. Put game .ISO in the same directory as the .bat scripts. (Named `2668 - Nichijou - Uchuujin (Japan) (v1.01).iso` in config file. Change if needed.)
-3. Clone Translation repository to a folder named `uchuujin-master` in the same directory as the .bat scripts. (Use `scripts` folder from the [weblate branch](https://github.com/noneucat/uchuujin/tree/weblate) to get the latest translations)
-4. Use `0 - RunAll.bat`to run a task. Press 1 to create a patch and playtest the game.
-(Or, execute each script in order, if you want to do it manually)
+3. Use `0 - RunAll.bat`to run a task. Press 1 to create a patch and playtest the game.
+
+(Or, execute each script in order, if you want to do it manually. Only recommended for dev work on the scripts.)
