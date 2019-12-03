@@ -1,6 +1,7 @@
 :: get values from config
 call Config.bat
 
+TITLE 4 - PackScripts - UchuujinPatchScripts
 ECHO Script 4 - PackScripts
 
 :: Example command:

@@ -1,5 +1,7 @@
 @ECHO OFF
 
+TITLE EmuTest - UchuujinPatchScripts
+
 :: PPSSPP testing
 
 IF EXIST ppsspp_win\PPSSPPWindows64.exe (

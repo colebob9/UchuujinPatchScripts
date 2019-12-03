@@ -1,6 +1,7 @@
 :: get values from config
 call Config.bat
 
+TITLE 2 - PatchGame - UchuujinPatchScripts
 ECHO Script 2 - PatchGame
 
 :: Create temporary folder for patching EBOOT
@@ -8,7 +9,7 @@ mkdir temp_patch
 
 :: Copy over relevant files
 copy dump\PSP_GAME\SYSDIR\EBOOT.BIN temp_patch\
-copy uchuujin-master\EBOOT.BIN.patch temp_patch\
+copy uchuujin-merged\EBOOT.BIN.patch temp_patch\
 
 :: Patch EBOOT with bspatch
 cd executables\bspatch

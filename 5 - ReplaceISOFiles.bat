@@ -1,6 +1,7 @@
 :: get values from config
 call Config.bat
 
+TITLE 5 - ReplaceISOFiles - UchuujinPatchScripts
 ECHO Script 5 - ReplaceISOFiles
 
 :: Example command:

@@ -3,6 +3,7 @@
 :: get values from config
 call Config.bat
 
+TITLE 1 - DumpGame - UchuujinPatchScripts
 ECHO Script 1 - DumpGame
 
 :: Create folder for game dump and extract .iso contents to it.

@@ -1,6 +1,7 @@
 :: get values from config
 call Config.bat
 
+TITLE 6 - CreateISOPatch - UchuujinPatchScripts
 ECHO Script 6 - CreateISOPatch
 
 :: Make folder for patch distribution.

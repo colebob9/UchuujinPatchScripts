@@ -1,6 +1,7 @@
 :: get values from config
 call Config.bat
 
+TITLE 3 - PatchScripts - UchuujinPatchScripts
 ECHO Script 3 - PatchScripts
 
 :: example command:
@@ -10,7 +11,7 @@ cd cpkdumps\sc\
 
 :: For each file in "cpkdumps\sc", 
 :: run sc_patch_translations.py for each corresponding .json and .po file.
-for %%f in (*) do python ..\..\uchuujin-master\src\sc_patch_translations.py %%f ..\..\uchuujin-master\scripts\%%f.json ..\..\uchuujin-master\scripts\en_US\%%f.po
+for %%f in (*) do python ..\..\uchuujin-merged\src\sc_patch_translations.py %%f ..\..\uchuujin-merged\scripts\%%f.json ..\..\uchuujin-merged\scripts\en_US\%%f.po
 
 cd ..\..\
 
