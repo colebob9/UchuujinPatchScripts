@@ -8,7 +8,7 @@ ECHO.
 
 :: ISO Check
 IF EXIST "%isoName%" (
-    ECHO ISO exists!
+    ECHO ISO exists.
 ) ELSE (
     ECHO PRECHECK ERROR!!
     ECHO Original ISO file doesn't exist! Please check that you have the .iso in the folder you are running this from.
@@ -19,12 +19,24 @@ IF EXIST "%isoName%" (
 
 :: 7zip check
 IF EXIST "%sevenZipLocation%" (
-    ECHO 7-Zip exists!
+    ECHO 7-Zip exists.
 ) ELSE (
     ECHO 7-Zip is not installed! Please install from https://www.7-zip.org/
     ECHO Also check Config.bat if you installed 7-Zip somewhere else.
     ECHO.
     GOTO EOF
+)
+:: Check if needs a cleanup
+IF EXIST  OR "temp_pack" OR "temp_patch" OR "cpkdumps" OR "dump" OR "patch_distrib" OR "texture_dump" OR "uchuujin-merged" OR "repos" (
+
+    ECHO.
+    ECHO PREVIOUS FILES DETECTED!
+    ECHO Consider running a cleanup if you are attempting a new patch.
+    ECHO These scripts might not function correctly without a cleanup done.
+    ECHO.
+    ECHO You can do this using 6 in the menu ahead, or execute Cleanup.bat
+    ECHO.
+    PAUSE
 )
 CLS
 
@@ -45,13 +57,13 @@ ECHO.
 ECHO Main tasks:
 ECHO -----------------------------------------------
 ECHO * 1 - Create Patch and Test Game (opens PPSSPP, keeps patched ISO file)
+ECHO * 2 - Create Patch (keeps patched ISO file, doesn't open PPSSPP)
 ECHO.
 ECHO.
 ECHO Alternate patch processes:
 ECHO -----------------------------------------------
-ECHO * 2 - Create Patch (keeps patched ISO file, doesn't open PPSSPP)
 ECHO * 3 - Only Create Patch .ZIP (shortest process, deletes patched ISO)
-ECHO * 4 - Execute all scripts (dump and create patch, longest process, keeps all files)
+ECHO * 4 - Execute all scripts and keep all files (dump and create patch)
 ECHO.
 ECHO File Management:
 ECHO -----------------------------------------------
