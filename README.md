@@ -3,7 +3,12 @@
 # UchuujinPatchScripts
 Scripts to easily automate the patching process for the Nichijou: Uchuujin [English Translation Project](https://github.com/noneucat/uchuujin). 
 
-These scripts are designed to make the process of dumping, modifying, and patching the game files as easy as possible. In addition to creating a patch for the game, you can also use these scripts to help dump the game iso, so that you can look around the game files in an easier way.
+**These scripts are only for developers or translators that want to see the English patch in its current state. (As of writing, borderline unplayable.) This also will not be the way most will download the English patch.**
+
+If you want to want to help with the development of this English patch, head over to our Discord! https://discord.gg/3pE8xdn
+
+These scripts are simply a wrapper for a variety of PSP tools and Python scripts, and are designed to make the process of dumping, modifying, and patching the game files as easy as possible. In addition to creating a patch for the game, you can also use these scripts to help dump the game ISO, so that you can look around the game files in an easier way.
+
 
 ### Current Features:
 * Game extraction and dumping
@@ -28,7 +33,7 @@ Currently *does not* include features like: (will be implemented)
 * Have 7-Zip and Python 3 installed. (Python must be in PATH)
 * Install the `polib` package for Python. 
 	* Use `pip install polib` in a Command Prompt. (Not in IDLE or a Python shell)
-* Clone of [Uchuujin Translation repository](https://github.com/noneucat/uchuujin).
+* Clone of the [Uchuujin Translation repository](https://github.com/noneucat/uchuujin).
 * This Visual C++ Redistributable
     https://www.microsoft.com/en-us/download/details.aspx?id=5555
 
@@ -42,4 +47,4 @@ Currently *does not* include features like: (will be implemented)
 2. Put game .ISO in the same directory as the .bat scripts. (Named `2668 - Nichijou - Uchuujin (Japan) (v1.01).iso` in config file. Change if needed.)
 3. Use `0 - RunAll.bat` to run a task. Press 1 to create a patch and playtest the game.
 
-(Or, execute each script in order, if you want to do it manually. Only recommended for dev work on the scripts.)
+(Or, execute each script in order, if you want to do it manually at your own discretion. Only recommended for dev work on the scripts.)

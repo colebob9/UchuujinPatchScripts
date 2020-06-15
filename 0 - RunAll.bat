@@ -27,14 +27,14 @@ IF EXIST "%sevenZipLocation%" (
     GOTO EOF
 )
 :: Check if needs a cleanup
-IF EXIST  OR "temp_pack" OR "temp_patch" OR "cpkdumps" OR "dump" OR "patch_distrib" OR "texture_dump" OR "uchuujin-merged" OR "repos" (
+IF EXIST "uchuujin-merged" (
 
     ECHO.
     ECHO PREVIOUS FILES DETECTED!
     ECHO Consider running a cleanup if you are attempting a new patch.
     ECHO These scripts might not function correctly without a cleanup done.
     ECHO.
-    ECHO You can do this using 6 in the menu ahead, or execute Cleanup.bat
+    ECHO You can do this using 7 in the menu ahead, or execute Cleanup.bat
     ECHO.
     PAUSE
 )
@@ -64,13 +64,14 @@ ECHO Alternate patch processes:
 ECHO -----------------------------------------------
 ECHO * 3 - Only Create Patch .ZIP (shortest process, deletes patched ISO)
 ECHO * 4 - Execute all scripts and keep all files (dump and create patch)
+ECHO * 5 - Only EBOOT patch (experimental, not recommended)
 ECHO.
 ECHO File Management:
 ECHO -----------------------------------------------
-ECHO * 5 - Only dump game
-ECHO * 6 - Cleanup previous files (deletes past files for a fresh script run)
+ECHO * 6 - Only dump game
+ECHO * 7 - Cleanup previous files (deletes past files for a fresh script run)
 ECHO.
-ECHO * 7 - EXIT
+ECHO * 8 - EXIT
 ECHO.
 
 :CHOICE
@@ -79,9 +80,10 @@ IF %MenuChoice%==1 GOTO PATCHANDTEST
 IF %MenuChoice%==2 GOTO PATCHANDKEEP
 IF %MenuChoice%==3 GOTO PATCH
 IF %MenuChoice%==4 GOTO EVERYTHING
-IF %MenuChoice%==5 GOTO GAMEDUMP
-IF %MenuChoice%==6 GOTO CLEANUP
-IF %MenuChoice%==7 GOTO EOF
+IF %MenuChoice%==5 GOTO EBOOTPATCH
+IF %MenuChoice%==6 GOTO GAMEDUMP
+IF %MenuChoice%==7 GOTO CLEANUP
+IF %MenuChoice%==8 GOTO EOF
 
 ECHO Invalid option!
 GOTO CHOICE
@@ -126,6 +128,15 @@ call "4 - PackScripts.bat" pauseskip
 call "5 - ReplaceISOFiles.bat" pauseskip
 call "6 - CreateISOPatch.bat" pauseskip
 call "Cleanup.bat" pauseskip
+GOTO EOF
+
+:EBOOTPATCH
+call "DownloadRepos.bat" pauseskip
+call "1 - DumpGame.bat" pauseskip
+call "2 - PatchGame.bat" pauseskip
+copy "%isoName%" NichiPatched.iso
+:: Replace EBOOT.BIN with patched version.
+executables\UMD-replace\UMD-replace.exe NichiPatched.iso PSP_GAME\SYSDIR\EBOOT.BIN dump\PSP_GAME\SYSDIR\EBOOT.BIN
 GOTO EOF
 
 :EVERYTHING

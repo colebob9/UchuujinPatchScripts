@@ -21,12 +21,12 @@ cd ..\..\
 
 REM Commented out other .cpk files until these are able to be modified.
 
-mkdir cpkdumps\union
-copy dump\PSP_GAME\USRDIR\DATA\union.cpk cpkdumps\union\
-cd cpkdumps\union
-..\..\executables\CriPakTools.exe union.cpk ALL
-del union.cpk
-cd ..\..\
+REM mkdir cpkdumps\union
+REM copy dump\PSP_GAME\USRDIR\DATA\union.cpk cpkdumps\union\
+REM cd cpkdumps\union
+REM ..\..\executables\CriPakTools.exe union.cpk ALL
+REM del union.cpk
+REM cd ..\..\
 
 REM mkdir cpkdumps\vo
 REM copy dump\PSP_GAME\USRDIR\DATA\vo.cpk cpkdumps\vo\
