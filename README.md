@@ -1,4 +1,6 @@
+**This repository is depreciated and is no longer being worked on.** Please refer to [UchuujinPatcher](https://github.com/colebob9/UchuujinPatcher) for an up to date program that accomplishes the same process.
 
+---
 
 # UchuujinPatchScripts
 Scripts to easily automate the patching process for the Nichijou: Uchuujin [English Translation Project](https://github.com/noneucat/uchuujin). 
