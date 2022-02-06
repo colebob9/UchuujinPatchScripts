@@ -1,9 +1,13 @@
-**This repository is deprecated and is no longer being worked on.** Please refer to [UchuujinPatcher](https://github.com/colebob9/UchuujinPatcher) for an up to date program that accomplishes the process much better.
+**This repository is deprecated and is no longer being worked on. The repo is archived as a result.** 
+
+Please refer to [UchuujinPatcher](https://github.com/colebob9/UchuujinPatcher) for an up to date program that accomplishes the process much better, with various improvements. 
+
+If you've been redirected from noneucat's archived GitHub, the project has moved to: https://github.com/UchuujinTranslate/uchuujin
 
 ---
 
 # UchuujinPatchScripts
-Scripts to easily automate the patching process for the Nichijou: Uchuujin [English Translation Project](https://github.com/noneucat/uchuujin). 
+Scripts to easily automate the patching process for the Nichijou: Uchuujin [English Translation Project](https://github.com/UchuujinTranslate/uchuujin). 
 
 **These scripts are only for developers or translators that want to see the English patch in its current state. (As of writing, borderline unplayable.) This also will not be the way most will download the English patch.**
 
