@@ -1,4 +1,4 @@
-**This repository is depreciated and is no longer being worked on.** Please refer to [UchuujinPatcher](https://github.com/colebob9/UchuujinPatcher) for an up to date program that accomplishes the same process.
+**This repository is deprecated and is no longer being worked on.** Please refer to [UchuujinPatcher](https://github.com/colebob9/UchuujinPatcher) for an up to date program that accomplishes the process much better.
 
 ---
 
